@@ -1,1 +1,7 @@
-const testVar = "HEllo form JS"
+const app = Vue.createApp({
+	data() {
+		return {
+			title: "Comedy event",
+		}
+	},
+})
