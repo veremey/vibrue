@@ -11,8 +11,9 @@
 		<div id="app">
 			<h2>{{title.split("").join("-")}}</h2>
 			<p>There are {{!tickets ? "no" : tickets}} left</p>
+			<p v-if="tickets > 0">You still can by a tiket in market</p>
 			<img v-bind:src="img" :alt="imgAlt" />
-			<img :src="img2" :alt="imgAlt" />
+			<img :src="img2" :alt="img2Alt" />
 		</div>
 		<script src="./main.js"></script>
 		<script>
