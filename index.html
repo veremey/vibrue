@@ -14,6 +14,9 @@
 			<p v-if="tickets > 0">You still can by a tiket in market</p>
 			<img v-bind:src="img" :alt="imgAlt" />
 			<img :src="img2" :alt="img2Alt" />
+			<ul>
+				<li v-for="(detail, index) in details" key="{index}">{{index}} - {{detail}}</li>
+			</ul>
 		</div>
 		<script src="./main.js"></script>
 		<script>

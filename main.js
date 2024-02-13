@@ -7,6 +7,7 @@ const app = Vue.createApp({
 			imgAlt: "cafe",
 			img2: "https://picsum.photos/id/15/200/300",
 			img2Alt: "berge",
+			details: ["Funny comics", "Mime artistry", "Satire", "Sketches"],
 		}
 	},
 })
