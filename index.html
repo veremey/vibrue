@@ -18,8 +18,19 @@
 			<button v-on:click="addCart()">add cart</button>
 			<button @click="addCart(2)">add 2 tickets to cart</button>
 			<ul>
-				<li v-for="(detail, index) in details" key="{index}">{{index}} - {{detail}}</li>
+				<li v-for="(detail, index) in details" :key="{index}">{{index}} - {{detail}}</li>
 			</ul>
+			<ul class="tickets">
+				<li
+					class="tickets__selector"
+					v-for="type in ticketTypes"
+					key="type.id"
+					@mouseover="updateImage(type.id)">
+					{{type.name}}
+					<img :src="type.image" alt="type.name" />
+				</li>
+			</ul>
+			<div class="right"><img class="right__image" :src="image" alt="imageAlt" /></div>
 		</div>
 		<script src="./main.js"></script>
 		<script>
