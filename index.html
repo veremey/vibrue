@@ -30,7 +30,9 @@
 					<img :src="type.image" alt="type.name" />
 				</li>
 			</ul>
-			<div class="right"><img class="right__image" :src="image" alt="imageAlt" /></div>
+			<div class="right"><img class="right__image" :src="image" :alt="imageAlt" /></div>
+
+			<button v-if="!soldOut" @click="updateCart(1)">Buy tickets</button>
 		</div>
 		<script src="./main.js"></script>
 		<script>
