@@ -17,6 +17,14 @@
 			<br />
 			<button v-on:click="addCart()">add cart</button>
 			<button @click="addCart(2)">add 2 tickets to cart</button>
+			<br />
+			<div class="ticket-details">
+				<ticket-details
+					v-for="type in ticketTypes"
+					:name="type.name"
+					:description="type.description"
+					:tickets="type.tickets" />
+			</div>
 			<ul :class="[{'sold-out' : soldOut}, {'is-hidden' : hidden}, 'detail']">
 				<li v-for="(detail, index) in details" :key="{index}">{{index}} - {{detail}}</li>
 			</ul>
@@ -37,7 +45,9 @@
 			<input type="text" v-model="message" />
 			<p>The input box says {{message}}</p>
 		</div>
+
 		<script src="./main.js"></script>
+		<script src="./components/TicketDetails.js"></script>
 		<script>
 			const mountedApp = app.mount("#app")
 		</script>
