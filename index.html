@@ -33,6 +33,9 @@
 			<div class="right"><img class="right__image" :src="image" :alt="imageAlt" /></div>
 
 			<button v-if="!soldOut" @click="addCart(1)">Buy tickets</button>
+
+			<input type="text" v-model="message" />
+			<p>The input box says {{message}}</p>
 		</div>
 		<script src="./main.js"></script>
 		<script>

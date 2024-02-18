@@ -12,6 +12,7 @@ const app = Vue.createApp({
 			img2Alt: "berge",
 			details: ["Funny comics", "Mime artistry", "Satire", "Sketches"],
 			hidden: false,
+			message: "",
 			ticketTypes: [
 				{
 					id: "bronzeTicket",
