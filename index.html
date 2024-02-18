@@ -17,7 +17,7 @@
 			<br />
 			<button v-on:click="addCart()">add cart</button>
 			<button @click="addCart(2)">add 2 tickets to cart</button>
-			<ul>
+			<ul :class="[{'sold-out' : soldOut}, {'is-hidden' : hidden}, 'detail']">
 				<li v-for="(detail, index) in details" :key="{index}">{{index}} - {{detail}}</li>
 			</ul>
 			<ul class="tickets">
@@ -32,7 +32,7 @@
 			</ul>
 			<div class="right"><img class="right__image" :src="image" :alt="imageAlt" /></div>
 
-			<button v-if="!soldOut" @click="updateCart(1)">Buy tickets</button>
+			<button v-if="!soldOut" @click="addCart(1)">Buy tickets</button>
 		</div>
 		<script src="./main.js"></script>
 		<script>

@@ -18,3 +18,12 @@ button {
 		margin-right: 10px;
 		overflow: hidden;
 	}
+
+.is-hidden {
+		display: none;
+	}
+
+.sold-out {
+		filter: grayscale(.8);
+		color: red;
+	}
